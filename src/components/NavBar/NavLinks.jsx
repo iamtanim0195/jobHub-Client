@@ -45,7 +45,7 @@ const NavLinks = () => {
                     className={
                         ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
                 }>
-                    Sign in
+                    Sign Up
                 </NavLink>
             </div>
         </div>

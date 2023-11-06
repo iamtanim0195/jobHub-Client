@@ -1,13 +1,18 @@
 import WebLogo from "../components/NavBar/WebLogo";
+import useAuth from "../hooks/useAuth";
 
 const Login = () => {
+
+const { user} =useAuth();
+console.log(user);
+
     return (
         <div>
             <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
                 <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
                     <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
-                        <div className="w-32 mx-auto"> 
-                          <WebLogo />
+                        <div className="w-32 mx-auto">
+                            <WebLogo/>
                         </div>
                         <div className="mt-12 flex flex-col items-center">
                             <h1 className="text-2xl xl:text-3xl font-extrabold">Sign up</h1>
@@ -55,7 +60,7 @@ const Login = () => {
                                         <span className="ml-3">Sign Up</span>
                                     </button>
                                     <p className="mt-6 text-xs text-gray-600 text-center">
-                                        I agree to abide by templatana's
+                                        I agree to abide by templatana&apos;s
                                         <a href="#" className="border-b border-gray-500 border-dotted">
                                             Terms of Service
                                         </a>
