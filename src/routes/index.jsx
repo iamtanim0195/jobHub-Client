@@ -8,12 +8,17 @@ import AddAjobs from "../page/AddAjobs";
 import MyJobs from "../page/MyJobs";
 import Blogs from "../page/Blogs";
 import UserProfile from "../page/UserProfile";
+import Home from "../page/Home";
 
 const routes = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         children: [
+            {
+                index: true,
+                element: <Home />
+            },
             {
                 path: "all-Jobs",
                 element: <AllJobs />,

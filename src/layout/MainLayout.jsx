@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types'
+import NavLinks from '../components/NavBar/NavLinks';
+import SideBar from '../components/NavBar/SideBar';
+import WebLogo from '../components/NavBar/WebLogo';
 import {NavLink} from 'react-router-dom';
 
 const MainLayout = ({children}) => {
@@ -9,45 +12,25 @@ const MainLayout = ({children}) => {
                 <div className="drawer-content flex flex-col">
                     {/* Navbar */}
                     <div className="w-full navbar bg-slate-900">
-                        <div className="flex-none lg:hidden">
-                            <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                                </svg>
-                            </label>
-                        </div>
-                        <div className="flex-1 px-2 mx-2 text-white">Navbar Title</div>
-                        <div className="flex-none hidden lg:block">
-                            <div className="flex gap-3 ">
-                                {/* Navbar menu content here */}
-                                <NavLink to="/"
-                                    className={
-                                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                                }>Home</NavLink>
-                                <NavLink to="/all-Jobs"
-                                    className={
-                                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                                }>All Jobs</NavLink>
-                                <NavLink to="/applied-jobs"
-                                    className={
-                                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                                }>Applied Jobs</NavLink>
-                                <NavLink to="/add-a-job"
-                                    className={
-                                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                                }>Add A Job</NavLink>
-                                <NavLink to="/my-jobs"
-                                    className={
-                                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                                }>My Jobs</NavLink>
-                                <NavLink to="/blogs"
-                                    className={
-                                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                                }>Blogs</NavLink>
-                                <NavLink to="/user-profile"
-                                    className={
-                                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                                }>User Profile</NavLink>
+                        <div className=' w-full max-w-[1200px] mx-auto'>
+                            <div className="flex-none lg:hidden">
+                                <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                </label>
+                            </div>
+                            <NavLink to="/">
+                                <WebLogo/>
+                            </NavLink>
+                            <div className="flex-1 text-red-600 text-3xl">
+                                <NavLink to="/">
+                                    Job
+                                    <span className='text-yellow-400'>Hub</span>
+                                </NavLink>
+                            </div>
+                            <div className="flex-none hidden lg:block">
+                                <NavLinks/>
                             </div>
                         </div>
                     </div>
@@ -55,15 +38,7 @@ const MainLayout = ({children}) => {
                     {children} </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 min-h-full bg-base-200">
-                        {/* Sidebar content here */}
-                        <li>
-                            <a>Sidebar Item 1</a>
-                        </li>
-                        <li>
-                            <a>Sidebar Item 2</a>
-                        </li>
-                    </ul>
+                    <SideBar/>
                 </div>
             </div>
         </div>
@@ -73,7 +48,7 @@ const MainLayout = ({children}) => {
 // ! props type
 
 MainLayout.propTypes = {
-    childern: PropTypes.node
+    children: PropTypes.node
 };
 
 export default MainLayout;
