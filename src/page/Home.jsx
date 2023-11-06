@@ -22,12 +22,12 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex h-[88vh] bg-fuchsia-700 text-white">
-        <div className="w-1/2 flex items-end justify-center pb-10">
-          {" "}
-          {/* Left side, takes half of the width */}
-          <div>
-            <h1 className="text-4xl py-5">Find the right job, right away</h1>
+      <section className="px-3 py-5 bg-fuchsia-700 lg:py-10">
+        <div className="grid lg:grid-cols-2 items-center justify-items-center gap-5">
+          <div className="text-white order-2 lg:order-1 flex flex-col justify-center items-center">
+            <h1 className="text-4xl font-bold py-5">
+              Find the right job, right away
+            </h1>
             <p className="py-2 text-lg">
               Forget the old rules. You can have the best people. Right now.
               Right here.
@@ -58,13 +58,15 @@ const Home = () => {
               </div>
             </div>
           </div>
+          <div className="relative top-5 lg:top-10 order-2 lg:order-2 h-80 w-80  lg:w-[500px] lg:h-[500px]">
+            <img
+              className=" h-full object-cover "
+              src={imageUrls[currentImageIndex]}
+              alt=""
+            />
+          </div>
         </div>
-        <div className="w-1/2 flex justify-end">
-          {" "}
-          {/* Right side, takes half of the width and aligns to the right */}
-          <img src={imageUrls[currentImageIndex]} alt="Job Search Image" />
-        </div>
-      </div>
+      </section>
       <div>job by category</div>
       <div>about jh</div>
       <div>contact us</div>
