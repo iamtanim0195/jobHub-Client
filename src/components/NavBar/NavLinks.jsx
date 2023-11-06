@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const NavLinks = () => {
     return (
-        <div>
+        <div className="flex justify-between">
             <div className="flex gap-3 ">
                 {/* Navbar menu content here */}
                 <NavLink to="/"
@@ -33,6 +33,20 @@ const NavLinks = () => {
                     className={
                         ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
                 }>User Profile</NavLink>
+            </div>
+            <div className="flex gap-2">
+                <NavLink to="/login"
+                    className={
+                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
+                }>
+                    Sign in
+                </NavLink>
+                <NavLink to="/join"
+                    className={
+                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
+                }>
+                    Sign in
+                </NavLink>
             </div>
         </div>
     )

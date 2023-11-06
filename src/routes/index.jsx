@@ -43,16 +43,17 @@ const routes = createBrowserRouter([
                 path: "user-profile",
                 element: <UserProfile />,
             },
+            {
+                path: "login",
+                element: <Login />,
+            },
+            {
+                path: "join",
+                element: <SignUp />,
+            },
         ],
     },
-    {
-        path: "/login",
-        element: <Login />,
-    },
-    {
-        path: "/signup",
-        element: <SignUp />,
-    },
+    
 ]);
 
 export default routes;
