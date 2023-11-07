@@ -1,4 +1,3 @@
-import React from "react";
 import WebLogo from "./NavBar/WebLogo";
 
 const Footer = () => {
