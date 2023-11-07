@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "category": "On Site Job",
+        "category": "On_Site_Job",
         "postedBy": "Company A",
         "jobTitle": "Software Engineer",
         "postingDate": "2023-11-10",
@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "category": "On Site Job",
+        "category": "On_Site_Job",
         "postedBy": "Company B",
         "jobTitle": "Marketing Specialist",
         "postingDate": "2023-11-12",
@@ -23,7 +23,7 @@
     },
     {
         "id": 3,
-        "category": "Remote Job",
+        "category": "Remote_Job",
         "postedBy": "Company C",
         "jobTitle": "Web Developer",
         "postingDate": "2023-11-09",
@@ -34,7 +34,7 @@
     },
     {
         "id": 4,
-        "category": "Remote Job",
+        "category": "Remote_Job",
         "postedBy": "Company D",
         "jobTitle": "Content Writer",
         "postingDate": "2023-11-14",
@@ -42,7 +42,8 @@
         "salaryRange": "$40,000 - $50,000",
         "applicantsNumber": 12,
         "viewDetailsButton": "View Details"
-    }, {
+    },
+    {
         "id": 5,
         "category": "Hybrid",
         "postedBy": "Company E",
@@ -52,7 +53,8 @@
         "salaryRange": "$80,000 - $100,000",
         "applicantsNumber": 18,
         "viewDetailsButton": "View Details"
-    }, {
+    },
+    {
         "id": 6,
         "category": "Hybrid",
         "postedBy": "Company F",
@@ -62,9 +64,10 @@
         "salaryRange": "$50,000 - $60,000",
         "applicantsNumber": 14,
         "viewDetailsButton": "View Details"
-    }, {
+    },
+    {
         "id": 7,
-        "category": "Part Time",
+        "category": "Part_Time",
         "postedBy": "Company G",
         "jobTitle": "Data Analyst",
         "postingDate": "2023-11-07",
@@ -72,9 +75,10 @@
         "salaryRange": "$35,000 - $45,000",
         "applicantsNumber": 8,
         "viewDetailsButton": "View Details"
-    }, {
+    },
+    {
         "id": 8,
-        "category": "Part Time",
+        "category": "Part_Time",
         "postedBy": "Company H",
         "jobTitle": "Customer Support Representative",
         "postingDate": "2023-11-13",
