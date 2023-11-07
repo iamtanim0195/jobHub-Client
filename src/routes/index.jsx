@@ -9,6 +9,8 @@ import MyJobs from "../page/MyJobs";
 import Blogs from "../page/Blogs";
 import UserProfile from "../page/UserProfile";
 import Home from "../page/Home";
+import PrivateRoute from "./PrivateRoute";
+import JobDetails from "../components/Home/JobDetails";
 
 const routes = createBrowserRouter([
     {
@@ -18,6 +20,11 @@ const routes = createBrowserRouter([
             {
                 index: true,
                 element: <Home />
+            },
+            {
+                path:"/details/:id",
+                element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>,
+                loader: () => fetch('/jobs.json'),
             },
             {
                 path: "all-Jobs",

@@ -1,4 +1,6 @@
 import {useEffect, useState} from "react";
+import { Link } from "react-router-dom";
+
 
 const JobCategory = () => {
     const [tab, setTab] = useState(1);
@@ -113,9 +115,9 @@ const JobCategory = () => {
                                 }</p>
 
                                 <div className="card-actions justify-center">
-                                    <button className="btn btn-primary"> {
+                                    <Link to={`/details/${value.id}`}><button className="btn btn-primary"> {
                                         value.viewDetailsButton
-                                    }</button>
+                                    }</button></Link>
                                 </div>
                             </div>
                         </div>

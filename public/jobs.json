@@ -8,7 +8,11 @@
         "applicationDeadline": "2023-11-30",
         "salaryRange": "$60,000 - $80,000",
         "applicantsNumber": 15,
-        "viewDetailsButton": "View Details"
+        "viewDetailsButton": "View Details",
+        "location": "New York, NY",
+        "experienceLevel": "Senior",
+        "jobType": "Full-time",
+        "requiredSkills": ["JavaScript", "Python", "React", "Node.js"]
     },
     {
         "id": 2,
@@ -19,7 +23,11 @@
         "applicationDeadline": "2023-11-25",
         "salaryRange": "$45,000 - $55,000",
         "applicantsNumber": 10,
-        "viewDetailsButton": "View Details"
+        "viewDetailsButton": "View Details",
+        "location": "Los Angeles, CA",
+        "experienceLevel": "Entry-Level",
+        "jobType": "Full-time",
+        "requiredSkills": ["Marketing", "Social Media Management"]
     },
     {
         "id": 3,
@@ -30,7 +38,11 @@
         "applicationDeadline": "2023-11-28",
         "salaryRange": "$70,000 - $90,000",
         "applicantsNumber": 20,
-        "viewDetailsButton": "View Details"
+        "viewDetailsButton": "View Details",
+        "location": "Remote",
+        "experienceLevel": "Mid-Level",
+        "jobType": "Full-time",
+        "requiredSkills": ["HTML", "CSS", "JavaScript", "React"]
     },
     {
         "id": 4,
@@ -41,7 +53,11 @@
         "applicationDeadline": "2023-11-29",
         "salaryRange": "$40,000 - $50,000",
         "applicantsNumber": 12,
-        "viewDetailsButton": "View Details"
+        "viewDetailsButton": "View Details",
+        "location": "Remote",
+        "experienceLevel": "Entry-Level",
+        "jobType": "Full-time",
+        "requiredSkills": ["Content Writing", "Blogging"]
     },
     {
         "id": 5,
@@ -52,7 +68,11 @@
         "applicationDeadline": "2023-11-27",
         "salaryRange": "$80,000 - $100,000",
         "applicantsNumber": 18,
-        "viewDetailsButton": "View Details"
+        "viewDetailsButton": "View Details",
+        "location": "San Francisco, CA",
+        "experienceLevel": "Senior",
+        "jobType": "Full-time",
+        "requiredSkills": ["Product Management", "Agile", "Scrum"]
     },
     {
         "id": 6,
@@ -63,7 +83,11 @@
         "applicationDeadline": "2023-11-26",
         "salaryRange": "$50,000 - $60,000",
         "applicantsNumber": 14,
-        "viewDetailsButton": "View Details"
+        "viewDetailsButton": "View Details",
+        "location": "San Francisco, CA",
+        "experienceLevel": "Mid-Level",
+        "jobType": "Full-time",
+        "requiredSkills": ["Graphic Design", "Adobe Creative Suite"]
     },
     {
         "id": 7,
@@ -74,7 +98,11 @@
         "applicationDeadline": "2023-11-22",
         "salaryRange": "$35,000 - $45,000",
         "applicantsNumber": 8,
-        "viewDetailsButton": "View Details"
+        "viewDetailsButton": "View Details",
+        "location": "Chicago, IL",
+        "experienceLevel": "Mid-Level",
+        "jobType": "Part-time",
+        "requiredSkills": ["Data Analysis", "SQL", "Excel"]
     },
     {
         "id": 8,
@@ -85,6 +113,10 @@
         "applicationDeadline": "2023-11-24",
         "salaryRange": "$30,000 - $40,000",
         "applicantsNumber": 7,
-        "viewDetailsButton": "View Details"
+        "viewDetailsButton": "View Details",
+        "location": "Chicago, IL",
+        "experienceLevel": "Entry-Level",
+        "jobType": "Part-time",
+        "requiredSkills": ["Customer Service", "Communication Skills"]
     }
 ]
