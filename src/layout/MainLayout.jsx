@@ -3,8 +3,11 @@ import NavLinks from "../components/NavBar/NavLinks";
 import SideBar from "../components/NavBar/SideBar";
 import WebLogo from "../components/NavBar/WebLogo";
 import {NavLink} from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import Footer from "../components/Footer";
 
 const MainLayout = ({children}) => {
+    const {user, logout} = useAuth();
     return (
         <div>
             <div className="drawer ">
@@ -32,7 +35,43 @@ const MainLayout = ({children}) => {
                             <div className="flex-grow hidden lg:block">
                                 <NavLinks/>
                             </div>
-                        </div>
+                            {
+                            user ?. email ? (
+                                <div className="flex gap-3">
+                                    <div className="avatar">
+                                        <div className="w-7 h-7 rounded-full">
+                                            <img src={
+                                                user.photoURL
+                                            }/>
+                                            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-70 text-yellow-400 text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+                                                {
+                                                user ?. displayName
+                                            } </div>
+                                        </div>
+                                    </div>
+                                    <button onClick={logout}
+                                        className="btn btn-neutral btn-sm text-white">
+                                        LogOut
+                                    </button>
+                                </div>
+                            ) : (
+                                <div className="flex gap-2">
+                                    <NavLink to="/login"
+                                        className={
+                                            ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
+                                    }>
+                                        Sign in
+                                    </NavLink>
+                                    <NavLink to="/join"
+                                        className={
+                                            ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
+                                    }>
+                                        Sign Up
+                                    </NavLink>
+                                </div>
+                            )
+                        }
+                            {" "} </div>
                     </div>
                     {/* Page content here */}
                     {children}
@@ -41,7 +80,9 @@ const MainLayout = ({children}) => {
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
                     <SideBar/>
                 </div>
+                
             </div>
+            <Footer />
         </div>
     );
 };

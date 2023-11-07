@@ -1,6 +1,7 @@
 import {NavLink} from "react-router-dom";
 
 const NavLinks = () => {
+    
     return (
         <div className="flex justify-between">
             <div className="flex gap-3 ">
@@ -8,48 +9,49 @@ const NavLinks = () => {
                 <NavLink to="/"
                     className={
                         ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                }>Home</NavLink>
+                }>
+                    Home
+                </NavLink>
                 <NavLink to="/all-Jobs"
                     className={
                         ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                }>All Jobs</NavLink>
+                }>
+                    All Jobs
+                </NavLink>
                 <NavLink to="/applied-jobs"
                     className={
                         ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                }>Applied Jobs</NavLink>
+                }>
+                    Applied Jobs
+                </NavLink>
                 <NavLink to="/add-a-job"
                     className={
                         ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                }>Add A Job</NavLink>
+                }>
+                    Add A Job
+                </NavLink>
                 <NavLink to="/my-jobs"
                     className={
                         ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                }>My Jobs</NavLink>
+                }>
+                    My Jobs
+                </NavLink>
                 <NavLink to="/blogs"
                     className={
                         ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                }>Blogs</NavLink>
+                }>
+                    Blogs
+                </NavLink>
                 <NavLink to="/user-profile"
                     className={
                         ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                }>User Profile</NavLink>
-            </div>
-            <div className="flex gap-2">
-                <NavLink to="/login"
-                    className={
-                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
                 }>
-                    Sign in
-                </NavLink>
-                <NavLink to="/join"
-                    className={
-                        ({isActive}) => isActive ? "btn btn-accent btn-sm text-white" : "btn btn-neutral btn-sm text-white"
-                }>
-                    Sign Up
+                    User Profile
                 </NavLink>
             </div>
-        </div>
-    )
-}
+            
+            {" "} </div>
+    );
+};
 
 export default NavLinks;
