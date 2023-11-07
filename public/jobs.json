@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "category": "On Site Job",
+        "postedBy": "Company A",
+        "jobTitle": "Software Engineer",
+        "postingDate": "2023-11-10",
+        "applicationDeadline": "2023-11-30",
+        "salaryRange": "$60,000 - $80,000",
+        "applicantsNumber": 15,
+        "viewDetailsButton": "View Details"
+    },
+    {
+        "id": 2,
+        "category": "On Site Job",
+        "postedBy": "Company B",
+        "jobTitle": "Marketing Specialist",
+        "postingDate": "2023-11-12",
+        "applicationDeadline": "2023-11-25",
+        "salaryRange": "$45,000 - $55,000",
+        "applicantsNumber": 10,
+        "viewDetailsButton": "View Details"
+    },
+    {
+        "id": 3,
+        "category": "Remote Job",
+        "postedBy": "Company C",
+        "jobTitle": "Web Developer",
+        "postingDate": "2023-11-09",
+        "applicationDeadline": "2023-11-28",
+        "salaryRange": "$70,000 - $90,000",
+        "applicantsNumber": 20,
+        "viewDetailsButton": "View Details"
+    },
+    {
+        "id": 4,
+        "category": "Remote Job",
+        "postedBy": "Company D",
+        "jobTitle": "Content Writer",
+        "postingDate": "2023-11-14",
+        "applicationDeadline": "2023-11-29",
+        "salaryRange": "$40,000 - $50,000",
+        "applicantsNumber": 12,
+        "viewDetailsButton": "View Details"
+    }, {
+        "id": 5,
+        "category": "Hybrid",
+        "postedBy": "Company E",
+        "jobTitle": "Product Manager",
+        "postingDate": "2023-11-08",
+        "applicationDeadline": "2023-11-27",
+        "salaryRange": "$80,000 - $100,000",
+        "applicantsNumber": 18,
+        "viewDetailsButton": "View Details"
+    }, {
+        "id": 6,
+        "category": "Hybrid",
+        "postedBy": "Company F",
+        "jobTitle": "Graphic Designer",
+        "postingDate": "2023-11-15",
+        "applicationDeadline": "2023-11-26",
+        "salaryRange": "$50,000 - $60,000",
+        "applicantsNumber": 14,
+        "viewDetailsButton": "View Details"
+    }, {
+        "id": 7,
+        "category": "Part Time",
+        "postedBy": "Company G",
+        "jobTitle": "Data Analyst",
+        "postingDate": "2023-11-07",
+        "applicationDeadline": "2023-11-22",
+        "salaryRange": "$35,000 - $45,000",
+        "applicantsNumber": 8,
+        "viewDetailsButton": "View Details"
+    }, {
+        "id": 8,
+        "category": "Part Time",
+        "postedBy": "Company H",
+        "jobTitle": "Customer Support Representative",
+        "postingDate": "2023-11-13",
+        "applicationDeadline": "2023-11-24",
+        "salaryRange": "$30,000 - $40,000",
+        "applicantsNumber": 7,
+        "viewDetailsButton": "View Details"
+    }
+]
