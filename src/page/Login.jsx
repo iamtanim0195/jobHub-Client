@@ -3,12 +3,13 @@ import WebLogo from "../components/NavBar/WebLogo";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import useAxios from "../hooks/useAxios";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+
   const [errorMessage, setErrorMessage] = useState("");
-  const { googleSignIn, login, user } = useAuth();
+  const { googleSignIn, login, user, logout } = useAuth();
+  const axios = useAxios();
   console.log(user);
   //! sign in with google sign
 
@@ -20,19 +21,36 @@ const Login = () => {
 
   const handleSignIn = async (e) => {
     e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    setErrorMessage(""); // Clear any previous error messages
 
-    const toastId = toast.loading(`Sign in`);
+    // ! login user account with email and password
+    const toastId = toast.loading("Sign in");
+
     try {
-      // ! login user account with email and password
-      await login(email, password);
-      toast.success("Successfully login!", { id: toastId });
-      console.log("Successfully login:", user);
+      const result = await login(email, password);
+      const user = result.user;
+
+      // Send a post request to get a JWT token (assuming this is how your backend works)
+      const res = await axios.post("/auth/jwt", { email: user.email }, {
+        withCredentials: true,
+      });
+
+      if (res.data.success) {
+        toast.success("Successfully login!", { id: toastId });
+      }else{
+        logout();
+      }
     } catch (error) {
-      setErrorMessage(error.message); // Set the error message here
-      toast.error("login is unsuccessful." , { id: toastId });
-      console.error("Error login user:", error);
+      // Handle and log the specific error
+      setErrorMessage(error.message || "An error occurred during login.");
+      toast.error("Login is unsuccessful.", { id: toastId });
+      console.error("Error during login:", error);
     }
   };
+
   return (
     <div>
       <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
@@ -82,13 +100,13 @@ const Login = () => {
                     className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                     type="email"
                     placeholder="Email"
-                    onBlur={(e) => setEmail(e.target.value)}
+                    name="email"
                   />
                   <input
                     className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                     type="password"
                     placeholder="Password"
-                    onBlur={(e) => setPassword(e.target.value)}
+                    name="password"
                   />
                   <span className="text-red-700">{errorMessage}</span>
                   <button className="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
