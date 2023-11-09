@@ -12,11 +12,13 @@ import Home from "../page/Home";
 import PrivateRoute from "./PrivateRoute";
 import JobDetails from "../components/Home/JobDetails";
 import AllJobDet from "../components/AllJobDet";
+import ErrorPage from "../components/Err";
 
 const routes = createBrowserRouter([
     {
         path: "/",
         element: <App />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
@@ -37,15 +39,15 @@ const routes = createBrowserRouter([
             },
             {
                 path: "applied-jobs",
-                element: <AppliedJobs />,
+                element:<PrivateRoute><AppliedJobs /></PrivateRoute> ,
             },
             {
                 path: "add-a-job",
-                element: <AddAjobs />,
+                element: <PrivateRoute><AddAjobs /></PrivateRoute>,
             },
             {
                 path: "my-jobs",
-                element: <MyJobs />,
+                element:<PrivateRoute><MyJobs /></PrivateRoute> ,
             },
             {
                 path: "blogs",

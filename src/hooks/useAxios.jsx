@@ -2,7 +2,7 @@ import axios from "axios";
 import useAuth from "./useAuth";
 
 const instance = axios.create({
-    baseURL: 'http://localhost:5000/api/',
+    baseURL: 'https://project-11-server-33e5tpqd5-tanims-projects-82b1e941.vercel.app/api',
     withCredentials: true,
 });
 const useAxios = () => {

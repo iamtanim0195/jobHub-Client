@@ -9,6 +9,7 @@ const MyJobs = () => {
   const [jobs, setJobData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
+
   useEffect(() => {
     if (user) {
       axios
@@ -30,7 +31,9 @@ const MyJobs = () => {
     );
   }
    const jobData = jobs.filter((job) => job.email === user.email);
-   console.log(jobData);
+   
+   const ids =jobData.map((job) => job._id);
+   console.log(ids);
   const filteredJobs = jobData.filter(
     (job) =>
       job.Job_Title &&
@@ -57,7 +60,7 @@ const MyJobs = () => {
             <th className="px-4 py-2">Job Posting Date</th>
             <th className="px-4 py-2">Application Deadline</th>
             <th className="px-4 py-2">Salary Range</th>
-            <th className="px-4 py-2">Details</th>
+            <th className="px-4 py-2">Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -69,11 +72,11 @@ const MyJobs = () => {
               <td className="px-4 py-2">{job.end_date}</td>
               <td className="px-4 py-2">{job.salary}</td>
               <td className="px-4 py-2">
-                <Link to={`/All-job-details/${job._id["$oid"]}`}>
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Details
+                
+                  <button  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Delete
                   </button>
-                </Link>
+                
               </td>
             </tr>
           ))}
