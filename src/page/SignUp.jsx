@@ -7,45 +7,35 @@ const SignUp = () => {
     const [displayName, setDisplayName] = useState("");
     const [photoURL, setPhotoURL] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
-    const { createUser, user } = useAuth();
+    const { createUser} = useAuth();
     const handleSignUp = async (e) => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
         const toastId = toast.loading(`Sign up`);
-        setErrorMessage();
-        createUser(email, password)
-            .then(result => {
-                const user = result.user;
-                toast.success("Successfully registered!", { id: toastId });
-                console.log("User registered successfully:", user);
-            })
-            .catch(error => {
-                setErrorMessage(error.message);
-                toast.error("Registration is unsuccessful.", { id: toastId });
-            });
-        /* try {
-            // Create a new user account with email and password
-            await createUser(email, password);
+        setErrorMessage(""); // Clear any previous error messages
     
-            // Check if the user object is not null before updating the profile
-            if (user) {
+        try {
+            const result = await createUser(email, password);
+            const user = result.user;
+    
+            // Update user profile if displayName and photoURL are provided
+            if (displayName || photoURL) {
                 await updateProfile(user, {
                     displayName: displayName,
-                    photoURL: photoURL
+                    photoURL: photoURL,
                 });
-                toast.success("Successfully registered!", { id: toastId });
-                console.log("User registered successfully:", user);
-            } else {
-                // Handle the case where user is null
-                toast.error("User is not authenticated.", { id: toastId });
             }
+    
+            toast.success("Successfully registered!", { id: toastId });
+            console.log("User registered successfully:", user);
         } catch (error) {
             setErrorMessage(error.message);
             toast.error("Registration is unsuccessful.", { id: toastId });
-        } */
+        }
     };
+    
 
     return (
         <div>

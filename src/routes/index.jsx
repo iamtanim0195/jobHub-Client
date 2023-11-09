@@ -11,6 +11,7 @@ import UserProfile from "../page/UserProfile";
 import Home from "../page/Home";
 import PrivateRoute from "./PrivateRoute";
 import JobDetails from "../components/Home/JobDetails";
+import AllJobDet from "../components/AllJobDet";
 
 const routes = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const routes = createBrowserRouter([
                 path:"/details/:id",
                 element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>,
                 loader: () => fetch('/jobs.json'),
+            },
+            {
+                path:"/All-job-details/:id",
+                element: <PrivateRoute><AllJobDet /></PrivateRoute>,
             },
             {
                 path: "all-Jobs",
